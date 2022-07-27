@@ -101,6 +101,8 @@ def fileGen(matrix,para_name_wonum, para_name_wnum,para_wonum_index,para_wnum_in
         if found == 0:
             found_all = 0
             print(para_name_wnum[i][0], " not found")
+
+    newMatchfile = re.sub("maize 201", "mainze "+str(No+1), newMatchfile)
     writeFile.write(newMatchfile)
     f.close()
     log.writelines("\n")
